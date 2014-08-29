@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="AirplaneQueue">
+  <head>
+    <meta charset = "utf-8">
+    <title>Aireplane Queue</title>
+    <script src="js/angular.js"></script>
+    <script src="js/controllers.js"></script>
+  </head>
+  <body ng-controller="AQcontroller">
+    <div>
+      Airplane name: <input ng-model="airplaneName">
+    </div>
+    <div>
+      Type:
+      <select ng-model="airplaneType">
+        <option value="passenger">Passenger</option>
+        <option value="cargo">Cargo</option>
+      </select>
+    </div>
+    <div>
+      Size:
+      <select ng-model="airplaneSize">
+        <option value="large">Large</option>
+        <option value="small">Small</option>
+      </select>
+    </div>
+    <div>
+      <button ng-click="enqueueAirplane()">Enqueue</button>
+    </div>
+    <div>
+      <button ng-click="dequeueAirplane()">Dequeue</button>
+    </div>
+    <div>
+      {{message}}
+    </div>
+  </body>
+</html>
